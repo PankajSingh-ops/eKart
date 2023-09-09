@@ -1,0 +1,8 @@
+{
+  "env":{
+      "DB_USERNAME":"pankajsinghjethi942",
+      "DB_PASSWORD":"Pankaj@123",
+      "DB_NAME":"dell",
+      "JWT_KEY":"It is a secret key"
+  }
+}

@@ -57,11 +57,15 @@ app.use("/uploads/images", express.static("uploads/images"));
 app.use("/api/admin", adminRoutes);
 app.use("/api", shopRoutes);
 app.use("/api",authRoutes);
+app.use("/",(req,res,next)=>{
+  res.send("Backend is Up!!!")
+  next();
+});
 
 mongoose
   .connect(MONGODB_URI)
   .then(() => {
-    app.listen(4000, "localhost", () => {
+    app.listen(process.env.PORT, "localhost", () => {
       console.log("App is running");
       
     });
